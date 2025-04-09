@@ -1,0 +1,20 @@
+{
+  "name": "url-metadata-service",
+  "version": "1.0.0",
+  "description": "A service to extract metadata from URLs",
+  "main": "api/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/node": "^2.15.6",
+    "cheerio": "^1.0.0-rc.12",
+    "got": "^11.8.6",
+    "metascraper": "^5.34.7",
+    "metascraper-description": "^5.34.7",
+    "metascraper-image": "^5.34.7",
+    "metascraper-title": "^5.34.7"
+  }
+}
