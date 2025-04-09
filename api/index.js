@@ -33,10 +33,13 @@ module.exports = async (req, res) => {
       return res.status(400).json({ error: 'URL parameter is required' });
     }
     
-    // Fetch HTML content with a timeout
+    // Fetch HTML content with a timeout and browser-like user agent
     const { body: html, url: resolvedUrl } = await got(url, {
       timeout: 8000,
-      retry: 2
+      retry: 2,
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+      }
     });
     
     // Extract metadata
